@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:meals/models/category.dart';
+import 'package:meals/models/ingredient.dart';
 import 'package:meals/models/meal.dart';
 
 // Constants in Dart should be written in lowerCamelcase.
@@ -57,7 +58,7 @@ const availableCategories = [
   ),
 ];
 
-const dummyMeals = [
+final dummyMeals = [
   Meal(
     id: 'm1',
     categories: [
@@ -71,12 +72,18 @@ const dummyMeals = [
         'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
     duration: 20,
     ingredients: [
-      '4 Tomatoes',
-      '1 Tablespoon of Olive Oil',
-      '1 Onion',
-      '250g Spaghetti',
-      'Spices',
-      'Cheese (optional)'
+      Ingredient(amount: 4, name: 'Tomatoes'),
+      Ingredient(amount: 1, unit: 'Tablespoon', name: 'Olive Oil'),
+      Ingredient(amount: 1, name: 'Onion'),
+      Ingredient(amount: 250, unit: 'g', name: 'Spaghetti'),
+      Ingredient(name: 'Spices'),
+      Ingredient(name: 'Cheese (optional)')
+      // '4 Tomatoes',
+      // '1 Tablespoon of Olive Oil',
+      // '1 Onion',
+      // '250g Spaghetti',
+      // 'Spices',
+      // 'Cheese (optional)'
     ],
     steps: [
       'Cut the tomatoes and the onion into small pieces.',
@@ -104,11 +111,16 @@ const dummyMeals = [
         'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
     duration: 10,
     ingredients: [
-      '1 Slice White Bread',
-      '1 Slice Ham',
-      '1 Slice Pineapple',
-      '1-2 Slices of Cheese',
-      'Butter'
+      Ingredient(name: 'White Bread'),
+      Ingredient(amount: 1, unit: 'Slice', name: 'Ham'),
+      Ingredient(amount: 1, unit: 'Slice', name: 'Pineapple'),
+      Ingredient(amount: 1, unit: 'Slice', name: 'Cheese'),
+      Ingredient(name: 'Butter')
+      // '1 Slice White Bread',
+      // '1 Slice Ham',
+      // '1 Slice Pineapple',
+      // '1-2 Slices of Cheese',
+      // 'Butter'
     ],
     steps: [
       'Butter one side of the white bread',
@@ -133,12 +145,18 @@ const dummyMeals = [
         'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
     duration: 45,
     ingredients: [
-      '300g Cattle Hack',
-      '1 Tomato',
-      '1 Cucumber',
-      '1 Onion',
-      'Ketchup',
-      '2 Burger Buns'
+      Ingredient(amount: 300, unit: 'g', name: 'Cattle Hack'),
+      Ingredient(amount: 1, name: 'Tomato'),
+      Ingredient(amount: 1, name: 'Cucumber'),
+      Ingredient(amount: 1, name: 'Onion'),
+      Ingredient(name: 'Ketchup'),
+      Ingredient(amount: 2, name: 'Burger Buns')
+      // '300g Cattle Hack',
+      // '1 Tomato',
+      // '1 Cucumber',
+      // '1 Onion',
+      // 'Ketchup',
+      // '2 Burger Buns'
     ],
     steps: [
       'Form 2 patties',
@@ -164,14 +182,22 @@ const dummyMeals = [
         'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
     duration: 60,
     ingredients: [
-      '8 Veal Cutlets',
-      '4 Eggs',
-      '200g Bread Crumbs',
-      '100g Flour',
-      '300ml Butter',
-      '100g Vegetable Oil',
-      'Salt',
-      'Lemon Slices'
+      Ingredient(amount: 8, name: 'Veal Cutlets'),
+      Ingredient(amount: 4, name: 'Eggs'),
+      Ingredient(amount: 200, unit: 'g', name: 'BreadCrumbs'),
+      Ingredient(amount: 100, unit: 'g', name: 'Flour'),
+      Ingredient(amount: 300, unit: 'ml', name: 'Butter'),
+      Ingredient(amount: 100, unit: 'g', name: 'Vegetable Oil'),
+      Ingredient(name: 'Salt'),
+      Ingredient(name: 'Lemon Slices')
+      // '8 Veal Cutlets',
+      // '4 Eggs',
+      // '200g Bread Crumbs',
+      // '100g Flour',
+      // '300ml Butter',
+      // '100g Vegetable Oil',
+      // 'Salt',
+      // 'Lemon Slices'
     ],
     steps: [
       'Tenderize the veal to about 2–4mm, and salt on both sides.',
@@ -201,15 +227,24 @@ const dummyMeals = [
         'https://cdn.pixabay.com/photo/2016/10/25/13/29/smoked-salmon-salad-1768890_1280.jpg',
     duration: 15,
     ingredients: [
-      'Arugula',
-      'Lamb\'s Lettuce',
-      'Parsley',
-      'Fennel',
-      '200g Smoked Salmon',
-      'Mustard',
-      'Balsamic Vinegar',
-      'Olive Oil',
-      'Salt and Pepper'
+      Ingredient(name: 'Arugula'),
+      Ingredient(name: 'Lamb\'s Lettuce'),
+      Ingredient(name: 'Parsley'),
+      Ingredient(name: 'Fennel'),
+      Ingredient(amount: 200, unit: 'g', name: 'Smoked Salmon'),
+      Ingredient(name: 'Mustard'),
+      Ingredient(name: 'Balsamic Vinegar'),
+      Ingredient(name: 'Olive Oil'),
+      Ingredient(name: 'Salt and Pepper')
+      // 'Arugula',
+      // 'Lamb\'s Lettuce',
+      // 'Parsley',
+      // 'Fennel',
+      // '200g Smoked Salmon',
+      // 'Mustard',
+      // 'Balsamic Vinegar',
+      // 'Olive Oil',
+      // 'Salt and Pepper'
     ],
     steps: [
       'Wash and cut salad and herbs',
@@ -236,12 +271,18 @@ const dummyMeals = [
         'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
     duration: 240,
     ingredients: [
-      '4 Sheets of Gelatine',
-      '150ml Orange Juice',
-      '80g Sugar',
-      '300g Yoghurt',
-      '200g Cream',
-      'Orange Peel',
+      Ingredient(amount: 4, unit: 'Sheets', name: 'Gelatine'),
+      Ingredient(amount: 150, unit: 'ml', name: 'Orange Juice'),
+      Ingredient(amount: 80, unit: 'g', name: 'Sugar'),
+      Ingredient(amount: 300, unit: 'g', name: 'Yoghurt'),
+      Ingredient(amount: 200, unit: 'g', name: 'Cream'),
+      Ingredient(name: 'Orange Peel')
+      // '4 Sheets of Gelatine',
+      // '150ml Orange Juice',
+      // '80g Sugar',
+      // '300g Yoghurt',
+      // '200g Cream',
+      // 'Orange Peel',
     ],
     steps: [
       'Dissolve gelatine in pot',
@@ -271,13 +312,20 @@ const dummyMeals = [
         'https://cdn.pixabay.com/photo/2018/07/10/21/23/pancake-3529653_1280.jpg',
     duration: 20,
     ingredients: [
-      '1 1/2 Cups all-purpose Flour',
-      '3 1/2 Teaspoons Baking Powder',
-      '1 Teaspoon Salt',
-      '1 Tablespoon White Sugar',
-      '1 1/4 cups Milk',
-      '1 Egg',
-      '3 Tablespoons Butter, melted',
+      Ingredient(amount: 1.5, unit: 'Cups', name: 'all-purpose Flour'),
+      Ingredient(amount: 3.5, unit: 'Teaspoons', name: 'Baking Powder'),
+      Ingredient(amount: 1, unit: 'Teaspoon', name: 'Salt'),
+      Ingredient(amount: 1, unit: 'Tablespoon', name: 'White Sugar'),
+      Ingredient(amount: 1.25, unit: 'cups', name: 'Milk'),
+      Ingredient(amount: 1, name: 'Egg'),
+      Ingredient(amount: 3, unit: 'Tablespoons', name: 'Butter, melted')
+      // '1 1/2 Cups all-purpose Flour',
+      // '3 1/2 Teaspoons Baking Powder',
+      // '1 Teaspoon Salt',
+      // '1 Tablespoon White Sugar',
+      // '1 1/4 cups Milk',
+      // '1 Egg',
+      // '3 Tablespoons Butter, melted',
     ],
     steps: [
       'In a large bowl, sift together the flour, baking powder, salt and sugar.',
@@ -302,13 +350,20 @@ const dummyMeals = [
         'https://cdn.pixabay.com/photo/2018/06/18/16/05/indian-food-3482749_1280.jpg',
     duration: 35,
     ingredients: [
-      '4 Chicken Breasts',
-      '1 Onion',
-      '2 Cloves of Garlic',
-      '1 Piece of Ginger',
-      '4 Tablespoons Almonds',
-      '1 Teaspoon Cayenne Pepper',
-      '500ml Coconut Milk',
+      Ingredient(amount: 4, name: 'Chicken Breasts'),
+      Ingredient(amount: 1, name: 'Onion'),
+      Ingredient(amount: 2, unit: 'Cloves', name: 'Garlic'),
+      Ingredient(amount: 1, unit: 'Piece', name: 'Ginger'),
+      Ingredient(amount: 4, unit: 'Tablespoons', name: 'Almonds'),
+      Ingredient(amount: 1, unit: 'Teaspoon', name: 'Cayenne Pepper'),
+      Ingredient(amount: 500, unit: 'ml', name: 'Coconut Milk'),
+      // '4 Chicken Breasts',
+      // '1 Onion',
+      // '2 Cloves of Garlic',
+      // '1 Piece of Ginger',
+      // '4 Tablespoons Almonds',
+      // '1 Teaspoon Cayenne Pepper',
+      // '500ml Coconut Milk',
     ],
     steps: [
       'Slice and fry the chicken breast',
@@ -335,18 +390,33 @@ const dummyMeals = [
         'https://cdn.pixabay.com/photo/2014/08/07/21/07/souffle-412785_1280.jpg',
     duration: 45,
     ingredients: [
-      '1 Teaspoon melted Butter',
-      '2 Tablespoons white Sugar',
-      '2 Ounces 70% dark Chocolate, broken into pieces',
-      '1 Tablespoon Butter',
-      '1 Tablespoon all-purpose Flour',
-      '4 1/3 tablespoons cold Milk',
-      '1 Pinch Salt',
-      '1 Pinch Cayenne Pepper',
-      '1 Large Egg Yolk',
-      '2 Large Egg Whites',
-      '1 Pinch Cream of Tartar',
-      '1 Tablespoon white Sugar',
+      Ingredient(amount: 1, unit: 'Teaspoon', name: 'melted Butter'),
+      Ingredient(amount: 2, unit: 'Tablespoons', name: 'white Sugar'),
+      Ingredient(
+          amount: 2,
+          unit: 'Ounces',
+          name: '70% dark Chocolate, broken into pieces'),
+      Ingredient(amount: 1, unit: 'Tablespoon', name: 'Butter'),
+      Ingredient(amount: 1, unit: 'Tablespoon', name: 'all-purpose Flour'),
+      Ingredient(amount: 4.33, unit: 'tablespoons', name: 'cold Milk'),
+      Ingredient(amount: 1, unit: 'Pinch', name: 'Salt'),
+      Ingredient(amount: 1, unit: 'Pinch', name: 'Cayenne Pepper'),
+      Ingredient(amount: 1, name: 'Large Egg Yolk'),
+      Ingredient(amount: 2, name: 'Large Egg Whites'),
+      Ingredient(amount: 1, unit: 'Pinch', name: 'Cream of Tartar'),
+      Ingredient(amount: 1, unit: 'Tablespoon', name: 'white Sugar'),
+      // '1 Teaspoon melted Butter',
+      // '2 Tablespoons white Sugar',
+      // '2 Ounces 70% dark Chocolate, broken into pieces',
+      // '1 Tablespoon Butter',
+      // '1 Tablespoon all-purpose Flour',
+      // '4 1/3 tablespoons cold Milk',
+      // '1 Pinch Salt',
+      // '1 Pinch Cayenne Pepper',
+      // '1 Large Egg Yolk',
+      // '2 Large Egg Whites',
+      // '1 Pinch Cream of Tartar',
+      // '1 Tablespoon white Sugar',
     ],
     steps: [
       'Preheat oven to 190°C. Line a rimmed baking sheet with parchment paper.',
@@ -386,11 +456,16 @@ const dummyMeals = [
         'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
     duration: 30,
     ingredients: [
-      'White and Green Asparagus',
-      '30g Pine Nuts',
-      '300g Cherry Tomatoes',
-      'Salad',
-      'Salt, Pepper and Olive Oil'
+      Ingredient(name: 'White and Green Asparagus'),
+      Ingredient(amount: 30, unit: 'g', name: 'Pine Nuts'),
+      Ingredient(amount: 300, unit: 'g', name: 'Cherry Tomatoes'),
+      Ingredient(name: 'Salad'),
+      Ingredient(name: 'Salt, Pepper and Olive Oil')
+      // 'White and Green Asparagus',
+      // '30g Pine Nuts',
+      // '300g Cherry Tomatoes',
+      // 'Salad',
+      // 'Salt, Pepper and Olive Oil'
     ],
     steps: [
       'Wash, peel and cut the asparagus',
