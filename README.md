@@ -1,16 +1,9 @@
-# meals
 
-A new Flutter project.
+# Assignment 2 - Meals App
 
-## Getting Started
+### What is the app for?
+This app is used so that a user can easily find a recipe for a dish by selecting a desired category. Each category contains some related meals. In addition, the user has the option to set filters for different eating habits so that only the meals that suit the user are displayed. Furthermore, the user has the possibility to mark individual meals as favourites, so that the user has quicker access to the favourite meals.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Additional feature
+The additional feature includes that the user can increase the quantities for a recipe.
